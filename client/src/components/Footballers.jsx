@@ -45,7 +45,7 @@ class Footballers extends React.Component {
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(Config.footballersAPI))
+    fetch(urlToCurrentDomain(Config.footballsAPI))
       .then (res  => res.json())
       .then (json => {
         this.setState({footballers       : json});

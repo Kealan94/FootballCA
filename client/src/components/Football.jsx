@@ -40,7 +40,7 @@ class Football extends React.Component {
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(`${Config.footballersAPI}/${this.props.footballID}`))
+    fetch(urlToCurrentDomain(`${Config.footballsAPI}/${this.props.footballID}`))
       .then (res  => res.json())
       .then (json => {
         this.setState({football       : json});
