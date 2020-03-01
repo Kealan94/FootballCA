@@ -5,7 +5,7 @@ const Football   = require('../models/Football').Football;
 
 /**
  * Functionality for this route:
- *  C   POST    /Footballerss/        Create a new Football
+ *  C   POST    /Footballers/        Create a new Football
  *  R   GET     /Footballers         Gets an array of all Footballers
  *  R   GET     /Footballers/:id     Get a single Footballer, by ID
  *  U   PUT     /Footballers/:id     Update a single Footballer, by id

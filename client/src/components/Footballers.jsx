@@ -35,8 +35,8 @@ class Footballers extends React.Component {
         <div>
           <h1>All Footballers in the database</h1>
           <ul>
-            {this.state.footballers.map(footballers => (
-              <li key={`footballers_${footballers._id}`}><Link to={`/footballers/${footballers._id}`}>{footballers.title}</Link></li>
+            {this.state.footballers.map(footballer => (
+              <li key={`footballer_${footballer._id}`}><Link to={`/footballer/${footballer._id}`}>{footballer.title}</Link></li>
             ))}
           </ul>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
