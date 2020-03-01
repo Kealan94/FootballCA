@@ -40,6 +40,8 @@ class Footballers extends React.Component {
             ))}
           </ul>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
+          <p><Link to='/add-footballer'>Edit a new Footballer</Link></p>
+          <p><Link to='/add-footballer'>Delete a new Footballer</Link></p>
         </div>
       )
     }
