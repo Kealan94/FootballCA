@@ -83,7 +83,9 @@ class AddFootball extends React.Component {
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
         title     : this.state.title,
-        content   : this.state.content
+        name      : this.state.name,
+        age       : this.state.age,
+        club      : this.state.club,
       })}
     )
       .then (res  => {
