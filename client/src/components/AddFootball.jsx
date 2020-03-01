@@ -10,8 +10,11 @@ class AddFootball extends React.Component {
   // #######################################################
 
   state = {
-    title     : ''
-  }
+    title     : '',
+    name      : '',
+    age       :'',
+    club      : ''
+      }
 
   // #######################################################
   // # Render
@@ -42,7 +45,25 @@ class AddFootball extends React.Component {
               <label>football Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
+            </div><div>
+              <label>football name:
+                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+              </label>
+            </div><div>
+
+              <label>football Age:
+                <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
+              </label>
             </div>
+
+            <div>
+
+              <label>football Club:
+                <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
+              </label>
+            </div>
+
+
 
             {/* <div>
               <label>football Content:
@@ -65,6 +86,15 @@ class AddFootball extends React.Component {
     this.setState({title: e.target.value || null});
   }
 
+
+  handleTitleUpdate(e) {
+    this.setState({name: e.target.value || null});
+  } handleTitleUpdate(e) {
+    this.setState({age: e.target.value || null});
+  }
+  handleTitleUpdate(e) {
+    this.setState({club: e.target.value || null});
+  }
   handleContentUpdate(e) {
     this.setState({content: e.target.value || null});
   }

@@ -2,6 +2,7 @@ import React              from 'react';
 import {Link}             from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
+import '../components/sass/main.scss';
 
 class Football extends React.Component {
 

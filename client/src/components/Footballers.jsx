@@ -33,6 +33,14 @@ class Footballers extends React.Component {
     } else {
       return (
         <div>
+        <div class="navbar">
+        <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+        </div>
           <h1>All Footballers in the database</h1>
           <ul>
             {this.state.footballers.map(footballers => (

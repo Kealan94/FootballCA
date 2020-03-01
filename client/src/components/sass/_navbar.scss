@@ -1,18 +1,8 @@
-body {
-  background-color: lightblue;
-}
+.navbar
+{
 
-h1 {
-  color: white;
-  text-align: center;
-}
 
-p {
-  font-family: verdana;
-  font-size: 20px;
-}
-
-.navbar ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -20,11 +10,11 @@ p {
   background-color: #333;
 }
 
-.navbar li {
+li {
   float: left;
 }
 
-.navbar li a {
+li a {
   display: block;
   color: white;
   text-align: center;
@@ -32,7 +22,7 @@ p {
   text-decoration: none;
 }
 
-.navbar li a:hover {
+li a:hover {
   background-color: #111;
 }
-/*# sourceMappingURL=main.css.map */
+}
