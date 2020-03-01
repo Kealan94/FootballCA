@@ -1,17 +1,17 @@
 import React    from 'react';
 import {Router} from "@reach/router";
-import Cakes   from './Cakes';
-import Cake    from './Cake';
-import AddCake from './AddCake';
+import Footballers   from './Footballers';
+import Football    from './Football';
+import AddFootball from './AddFootball';
 
 class App extends React.Component {
 
   render() {
     return (
       <Router>
-        <Cakes   path='/' />
-        <Cake    path='/cake/:cakeID' />
-        <AddCake path='/add-cake/' />
+        <Footballers   path='/' />
+        <Football    path='/football/:footballID' />
+        <AddFootball path='/add-football/' />
       </Router>
     );
   }
