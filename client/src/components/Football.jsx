@@ -53,4 +53,4 @@ class Football extends React.Component {
 
 }
 
-export default Cake;
+export default Football;
