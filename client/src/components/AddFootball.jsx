@@ -87,18 +87,17 @@ class AddFootball extends React.Component {
   }
 
 
-  handleTitleUpdate(e) {
+  handleNameUpdate(e) {
     this.setState({name: e.target.value || null});
-  } handleTitleUpdate(e) {
+
+  }
+   handleAgeUpdate(e) {
     this.setState({age: e.target.value || null});
   }
-  handleTitleUpdate(e) {
+
+  handleClubUpdate(e) {
     this.setState({club: e.target.value || null});
   }
-  handleContentUpdate(e) {
-    this.setState({content: e.target.value || null});
-  }
-
   handleSubmit(e) {
 
     // Prevent the default form submit action
