@@ -33,13 +33,14 @@ class Footballers extends React.Component {
     } else {
       return (
         <div>
-        <div class="navbar">
+<div class="navbar">
         <ul>
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="#localhost:3000/footballers">Player</a></li>
+  <li><a href="#club">Club</a></li>
+  <li><a href="#stats ">Stats</a></li>
 </ul>
+
         </div>
           <h1>All Footballers in the database</h1>
           <ul>
