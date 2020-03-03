@@ -2,7 +2,7 @@ const mongoose  = require('mongoose');
 const validator = require('validator');
 
 const SchemeConfig = {timestamps: true, skipVersioning: true};
-const FootballersSchema  = new mongoose.Schema({
+const FootballerSchema  = new mongoose.Schema({
 
     title: {
       type      : String,
@@ -13,4 +13,4 @@ const FootballersSchema  = new mongoose.Schema({
  
   }, SchemeConfig);
 
-  module.exports.Footballers = mongoose.model('Footballers', FootballersSchema);
+  module.exports.Footballer = mongoose.model('Footballer', FootballerSchema);
