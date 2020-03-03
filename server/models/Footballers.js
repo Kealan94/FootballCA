@@ -8,28 +8,7 @@ const FootballersSchema  = new mongoose.Schema({
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
-    }
-    id: {
-      type   : int,
-      required : true,
-      validator : value => !validator.isEmpty(value)
-    }
-    name: {
-      type   : String,
-      required : true,
-      validator : value => !validator.isEmpty(value)
-    }
-
-    age: {
-      type   : int,
-      required : true,
-      validator : value => !validator.isEmpty(value)
-    }
-
-    club: {
-      type   : String,
-      required : true,
-      validator : value => !validator.isEmpty(value)
+    
     }
  
   }, SchemeConfig);
