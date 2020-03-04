@@ -52,7 +52,7 @@ class Footballers extends React.Component {
             ))}
           </ul>
           <h2>This is the homepage where you can view a list of all of the footballers and see the various clubs that they have played 
-            for and the stats that each player has. Why not also add, edit or delete a footballer of your choice.
+            for and the stats that each player has. Why not also add, edit or delete a footballer of
           </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
