@@ -34,6 +34,7 @@ class Football extends React.Component {
       return (
         <div>
           <h1>{this.state.football.title}</h1>
+          <h2>{this.state.football.Description}</h2>     
           <Link to='/'>Back to All footballs</Link>
         </div>
       )

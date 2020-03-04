@@ -9,9 +9,10 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Footballers   path='/' />
+        <Footballers   path='/' /> 
         <Football    path='/football/:footballID' />
         <AddFootball path='/add-football/' />
+       
       </Router>
     );
   }

@@ -4,6 +4,8 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
 
+ 
+
 class Footballers extends React.Component {
 
   // #######################################################
@@ -32,25 +34,29 @@ class Footballers extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div> 
+
 <div class="navbar">
         <ul>
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#localhost:3000/footballers">Player</a></li>
-  <li><a href="#club">Club</a></li>
+  <li><a href="#localhost:3000/footballers">Players</a></li>
+  <li><a href="#club">Clubs</a></li>
   <li><a href="#stats ">Stats</a></li>
 </ul>
-
         </div>
           <h1>All Footballers in the database</h1>
+
           <ul>
             {this.state.footballers.map(footballers => (
-              <li key={`footballers_${footballers._id}`}><Link to={`/footballers/${footballers._id}`}>{footballers.title}</Link></li>
+              <li key={`footballers_${footballers._id}`}><Link to={`/footballers/${footballers._id}`}>{footballers.title}{footballers.description}</Link></li>
             ))}
           </ul>
+          <h2>This is the homepage where you can view a list of all of the footballers and see the various clubs that they have played 
+            for and the stats that each player has. Why not also add, edit or delete a footballer of your choice.
+          </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
-          <p><Link to='/add-footballer'>Edit a new Footballer</Link></p>
-          <p><Link to='/add-footballer'>Delete a new Footballer</Link></p>
+          <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
+          <p><Link to='/delete-footballer'>Delete a new Footballer</Link></p>
         </div>
       )
     }

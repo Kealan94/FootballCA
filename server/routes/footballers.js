@@ -39,13 +39,15 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 // POST Create a new football
 router.post('/', (req, res) => {
   return new Football({
+    id        : req.body.id,
     title     : req.body.title,
     name      : req.body.name,
-    age       : req.body.name,
+    age       : req.body.age,
     club      : req.body.club,
+    description : req.body.Description,
   })
   .save()
-  .then (football => Football.populate(football, {path: '_id'}))
+  .then (football => Football.populate(football, {path: '_id, title,name,age,club,Description'}))
   .then (football => res.json(football))
   .catch(err => res
     .status(400)
