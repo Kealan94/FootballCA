@@ -47,16 +47,15 @@ class Footballers extends React.Component {
           <h1>All Footballers in the database</h1>
 
           <ul>
-            {this.state.footballers.map(footballers => (
-              <li key={`footballers_${footballers._id}`}><Link to={`/footballers/${footballers._id}`}>{footballers.title}{footballers.description}</Link></li>
+            {this.state.footballers.map(footballer => (
+              <li key={`footballer_${footballer._id}`}><Link to={`/footballer/${footballer._id}`}>{footballer.title}{footballer.description}</Link></li>
             ))}
           </ul>
-          <h2>This is the homepage where you can view a list of all of the footballers and see the various clubs that they have played 
-            for and the stats that each player has. Why not also add, edit or delete a footballer of
+          <h2>This is the homepage where you can view a list of all of the footballers and get information about them such as the clubs they have 
+          played for, awards won, goals scored etc.
           </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
-          <p><Link to='/delete-footballer'>Delete a new Footballer</Link></p>
         </div>
       )
     }

@@ -3,7 +3,7 @@ import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
 
-class AddFootball extends React.Component {
+class AddFootballer extends React.Component {
 
   // #######################################################
   // # Local state
@@ -28,7 +28,7 @@ class AddFootball extends React.Component {
           <h1>Error</h1>
           <p>Sorry, there was an error creating the football. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
-          <Link to='/'>Back to All footballs</Link>
+          <Link to='/'>Back to All footballers</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
@@ -38,20 +38,20 @@ class AddFootball extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a football</h1>
+          <h1>Add a footballer</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>football Title:
+              <label>footballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div><div>
-              <label>football name:
+              <label>footballer name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
               </label>
             </div><div>
 
-              <label>football Age:
+              <label>footballer Age:
                 <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
               </label>
             </div>
@@ -72,11 +72,13 @@ class AddFootball extends React.Component {
             </div> */}
 
             <div>
-              <input type='submit' value='Add Football' />
+              <input type='submit' value='Add Footballer' />
             </div>
 
+            
+
           </form>
-          <Link to='/'>Back to All footballs</Link>
+          <Link to='/'>Back to All footballers</Link>
         </div>
       );
     }
@@ -140,4 +142,4 @@ class AddFootball extends React.Component {
 
 }
 
-export default AddFootball;
+export default AddFootballer;
