@@ -1,28 +1,14 @@
-import React              from 'react';
-import {Link}             from '@reach/router';
-import urlToCurrentDomain from '../lib/urlToCurrentDomain';
-import * as Config        from '../config.json'
-
+import React              from 'react'; 
+import '../components/sass/main.scss';
 class Header extends React.Component {
 
-  // #######################################################
-  // # Local state
-  // #######################################################
-
-
-  // #######################################################
-  // # Render
-  // #######################################################
 
   render() {
       return (
-      
-          <Header>
-            <div>
-          <h1> Header </h1>
-          </div>
-          </Header>
-
+        <div class="header">
+        <h1>Header</h1>
+        <p>My supercool header</p>
+      </div>
       )
 
 

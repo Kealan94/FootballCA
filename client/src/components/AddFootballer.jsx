@@ -2,7 +2,9 @@ import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
-
+import '../components/sass/main.scss';
+import Header             from './Header';
+import Navbar             from './Navbar';
 class AddFootballer extends React.Component {
 
   // #######################################################
@@ -37,14 +39,15 @@ class AddFootballer extends React.Component {
         <div>
           <h1>Add a footballer</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
-
+          <Navbar></Navbar>
+          <Header> </Header>
+        
             <div>
               <label>fooballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
 
-        
 
             <div>
               <input type='submit' value='Add Footballer' />
