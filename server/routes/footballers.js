@@ -1,11 +1,11 @@
 const express  = require('express');
 const router   = express.Router();
 const mongoose = require('mongoose'); // using to generate ObjectIDs
-const Football   = require('../models/Football').Football;
+const Footballer   = require('../models/Footballer').Footballer;
 
 /**
  * Functionality for this route:
- *  C   POST    /Footballers/        Create a new Football
+ *  C   POST    /Footballers/        Create a new Footballer
  *  R   GET     /Footballers         Gets an array of all Footballers
  *  R   GET     /Footballers/:id     Get a single Footballer, by ID
  *  U   PUT     /Footballers/:id     Update a single Footballer, by id
@@ -17,38 +17,33 @@ router.get('/', (req, res) => {
     return mongoose
       .model('Footballer')
       .find({})
-      .then (Footballers => res.json(Footballers))
+      .then (footballers => res.json(footballers))
       .catch(err => res
         .status(500)
         .json({ok: false})
       );
   });
 
-  // GET a single Football by ID
+  // GET a single footballer by ID
 router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
   return mongoose
-    .model('Football')
+    .model('Footballer')
     .findOne({_id: req.params.id})
-    .then (football => res.json(football))
+    .then (footballer => res.json(footballer))
     .catch(err => res
       .status(500)
       .json({ok: false})
     );
 });
 
-// POST Create a new Footballer
+// POST Create a new footballer
 router.post('/', (req, res) => {
-  return new Football({
-    id        : req.body.id,
+  return new Footballer({
     title     : req.body.title,
-    name      : req.body.name,
-    age       : req.body.age,
-    club      : req.body.club,
-
   })
   .save()
-  .then (football => Football.populate(football, {path: '_id'}))
-  .then (football => res.json(football))
+  .then (footballer => Footballer.populate(footballer, {path: '_id'}))
+  .then (footballer => res.json(footballer))
   .catch(err => res
     .status(400)
     .json({ok: false, error: err.message})
@@ -57,7 +52,7 @@ router.post('/', (req, res) => {
 
 // DELETE Delete a topic with a given ID
 router.delete('/:id([0-9a-fA-F]{24})', (req, res) => {
-  return Football
+  return Footballer
     .deleteOne({_id: req.params.id})
     .then (() => res.json({'ok': true}))
     .catch(err => res
@@ -66,21 +61,18 @@ router.delete('/:id([0-9a-fA-F]{24})', (req, res) => {
     );
 });
 
-// PUT Update a football
+// PUT Update a footballer
 router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
-  return Football
+  return Footballer
     .findOneAndUpdate(
       {_id: req.params.id},
       {$set: {
         title  : req.body.title,
-        name  : req.body.name,
-        age  : req.body.age,
-        club  : req.body.club,
       }},
       {new: true}
     )
-    .then (football => Football.populate(football, {path: '_id'}))
-    .then (football => res.json(football))
+    .then (footballer => Footballer.populate(footballer, {path: '_id'}))
+    .then (footballer => res.json(footballer))
     .catch(err => res
       .status(500)
       .json({ok: false})

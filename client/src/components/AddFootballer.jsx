@@ -10,11 +10,8 @@ class AddFootballer extends React.Component {
   // #######################################################
 
   state = {
-    title     : '',
-    name      : '',
-    age       :'',
-    club      : ''
-      }
+    title     : ''
+  }
 
   // #######################################################
   // # Render
@@ -26,14 +23,14 @@ class AddFootballer extends React.Component {
       return (
         <div>
           <h1>Error</h1>
-          <p>Sorry, there was an error creating the football. The error was: {this.state.reportedError || 'Unknown'}</p>
+          <p>Sorry, there was an error creating the cake. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All footballers</Link>
         </div>
       );
     } else if (this.state.processingAdd) {
       return (
-        <div>Adding football...</div>
+        <div>Adding footballer...</div>
       );
     } else {
       return (
@@ -42,35 +39,19 @@ class AddFootballer extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>footballer Title:
+              <label>fooballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
-              </label>
-
-            </div><div>
-              <label>footballer name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
-              </label>
-            </div><div>
-
-              <label>footballer Age:
-                <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
-              </label>
-            </div><div>
-
-              <label>football Club:
-                <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
               </label>
             </div>
 
+        
 
             <div>
               <input type='submit' value='Add Footballer' />
             </div>
 
-            
-
           </form>
-          <Link to='/'>Back to All footballers</Link>
+          <Link to='/'>Back to All cakes</Link>
         </div>
       );
     }
@@ -80,18 +61,6 @@ class AddFootballer extends React.Component {
     this.setState({title: e.target.value || null});
   }
 
-
-  handleNameUpdate(e) {
-    this.setState({name: e.target.value || null});
-
-  }
-   handleAgeUpdate(e) {
-    this.setState({age: e.target.value || null});
-  }
-
-  handleClubUpdate(e) {
-    this.setState({club: e.target.value || null});
-  }
   handleSubmit(e) {
 
     // Prevent the default form submit action
@@ -105,10 +74,8 @@ class AddFootballer extends React.Component {
       },
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
-        title     : this.state.title,
-        name      : this.state.name,
-        age       : this.state.age,
-        club      : this.state.club,
+        title     : this.state.title
+  
       })}
     )
       .then (res  => {
@@ -117,7 +84,7 @@ class AddFootballer extends React.Component {
         }
         return res.json();
       })
-      .then (json => navigate(`/footballers/${json._id}`))
+      .then (json => navigate(`/footballer/${json._id}`))
       .catch(err => {
         this.setState({reportedError: err.message || 'Unknown'});
       })
@@ -129,7 +96,7 @@ class AddFootballer extends React.Component {
   }
 
   componentDidMount() {
-    // this.getComments(this.props.footballID);
+    // this.getComments(this.props.cakeID);
   }
 
 }
