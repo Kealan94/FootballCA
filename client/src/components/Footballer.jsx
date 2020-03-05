@@ -34,10 +34,11 @@ class Footballer extends React.Component {
       return (
         <div>
           <h1>{this.state.footballer.title}</h1>
+          <h1>{this.state.footballer.name}</h1>
           <h2>{this.state.footballer.description}</h2>
-          <h3>Lionel Andrés Messi eas born on the 24th of June 1987. He is an Argentine professional footballer who plays as a forward and captains both Spanish club Barcelona and the Argentina national team. Often considered the best player in the world and widely regarded as one of the greatest players of all time, Messi has won a record six Ballon d'Or awards, and a record six European Golden Shoes. He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey. 
-          A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (437), a La Liga and European league season (50), most hat-tricks in La Liga (36) and the UEFA Champions League (8), and most assists in La Liga (181) and the Copa América (12).
-           He has scored over 700 senior career goals for club and country. Born and raised in central Argentina, Messi relocated to Spain to join Barcelona at age 13, for whom he made his competitive debut aged 17 in October 2004. </h3>       
+          <h1>{this.state.footballer.age}</h1>
+          <h2>{this.state.footballer.club}</h2>
+      
  
       <Link to='/'>Back to All footballers on the home page </Link>
         </div>
