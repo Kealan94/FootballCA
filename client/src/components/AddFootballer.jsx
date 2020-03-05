@@ -54,7 +54,7 @@ class AddFootballer extends React.Component {
             </div>
 
           </form>
-          <Link to='/'>Back to All cakes</Link>
+          <Link to='/'>Back to All footballers</Link>
         </div>
       );
     }
