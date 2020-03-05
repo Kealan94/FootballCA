@@ -12,7 +12,12 @@ class AddFootballer extends React.Component {
   // #######################################################
 
   state = {
-    title     : ''
+    id       : '',
+    title    : '',
+    name     : '',
+    age      : '',
+    club     : ''
+ 
   }
 
   // #######################################################
@@ -25,7 +30,7 @@ class AddFootballer extends React.Component {
       return (
         <div>
           <h1>Error</h1>
-          <p>Sorry, there was an error creating the cake. The error was: {this.state.reportedError || 'Unknown'}</p>
+          <p>Sorry, there was an error creating the fooballer. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All footballers</Link>
         </div>
@@ -41,6 +46,14 @@ class AddFootballer extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
           <Navbar></Navbar>
           <Header> </Header>
+
+
+          <div>
+              <label>fooballer Id:
+                <input type='' value={this.state.id} onChange={this.handleIdUpdate.bind(this)} />
+              </label>
+            </div>
+
         
             <div>
               <label>fooballer Title:
@@ -50,8 +63,28 @@ class AddFootballer extends React.Component {
 
 
             <div>
+              <label>fooballer Name:
+                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+              </label>
+            </div>
+
+            <div>
+              <label>fooballer Age:
+                <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
+              </label>
+            </div>
+
+
+            <div>
+              <label>fooballer Club:
+                <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
+              </label>
+            </div>
+
+            <div>
               <input type='submit' value='Add Footballer' />
             </div>
+
 
           </form>
           <Link to='/'>Back to All footballers</Link>
@@ -59,10 +92,29 @@ class AddFootballer extends React.Component {
       );
     }
   }
+  
+  handleIdUpdate(e) {
+    this.setState({id: e.target.value || null});
+  }
 
   handleTitleUpdate(e) {
     this.setState({title: e.target.value || null});
   }
+
+
+  handleNameUpdate(e) {
+    this.setState({name: e.target.value || null});
+  }
+
+  handleAgeUpdate(e) {
+    this.setState({age: e.target.value || null});
+  }
+
+
+  handleClubUpdate(e) {
+    this.setState({club: e.target.value || null});
+  }
+
 
   handleSubmit(e) {
 

@@ -4,38 +4,21 @@ const validator = require('validator');
 const SchemeConfig = {timestamps: true, skipVersioning: true};
 const FootballerSchema  = new mongoose.Schema({
 
+
+  id: {
+    type      : String,
+    required  : true,
+    validator : value => !validator.isEmpty(value)
+  },
+
+ 
     title: {
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
     },
-    name: {
-      type      : String,
-      required  : true,
-      validator : value => !validator.isEmpty(value)
-    },
-
-
-    name: {
-      type      : String,
-      required  : true,
-      validator : value => !validator.isEmpty(value)
-    },
-    
-    club: {
-      type      : String,
-      required  : true,
-      validator : value => !validator.isEmpty(value)
-    }
  
-   
-
-
-
-
  
-
-
   }, SchemeConfig);
 
   module.exports.Footballer = mongoose.model('Footballer', FootballerSchema);

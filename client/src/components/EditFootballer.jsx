@@ -2,6 +2,8 @@ import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
+import Header             from './Header';
+import Navbar             from './Navbar';
 
 class EditFootballer extends React.Component {
 
@@ -40,7 +42,14 @@ class EditFootballer extends React.Component {
         <div>
           <h1>Edit footballer</h1>
           <form onSubmit={this.handleSubmit.bind(this)}>
-
+          <div class="navbar">
+        <ul>
+  <li><a class="active" href="localhost:3000/footballers">Home</a></li>
+  <li><a href="localhost:3001">Players</a></li>
+  <li><a href="#club">Clubs</a></li>
+  <li><a href="https://www.whoscored.com/Statistics ">stats</a></li>
+</ul>
+        </div>
             <div>
               <label>footballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
@@ -79,7 +88,11 @@ class EditFootballer extends React.Component {
 
           </form>
           <Link to='/'>Back to All footballers</Link>
+          <div class = "footer">
+<p>Created By: Kealan Crilly</p>
+<p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>
         </div>
+        
       );
     }
   }

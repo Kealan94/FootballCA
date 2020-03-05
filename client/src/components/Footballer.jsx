@@ -33,9 +33,9 @@ class Footballer extends React.Component {
     } else {
       return (
         <div>
+          <h1>{this.state.footballer.id}</h1>
           <h1>{this.state.footballer.title}</h1>
           <h1>{this.state.footballer.name}</h1>
-          <h2>{this.state.footballer.description}</h2>
           <h1>{this.state.footballer.age}</h1>
           <h2>{this.state.footballer.club}</h2>
       
