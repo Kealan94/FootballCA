@@ -3,7 +3,6 @@
     "name"  : "Lionel Messi",
     "age"   :  32,
     "club"  : "FC Barcelona",
-    "Description"  : 
     "updatedAt" : ISODate("2020-02-13T20:42:38.316Z")
 }
 

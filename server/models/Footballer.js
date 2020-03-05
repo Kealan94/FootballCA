@@ -8,7 +8,33 @@ const FootballerSchema  = new mongoose.Schema({
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
+    },
+    name: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    },
+
+
+    name: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    },
+    
+    club: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
     }
+ 
+   
+
+
+
+
+ 
+
 
   }, SchemeConfig);
 
