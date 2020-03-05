@@ -1,7 +1,7 @@
 Start up process: If a user is working on a college computer they must start up command line then type mongod --dbpath="C:\Users\DNumber\Desktop\data"
 
 
-there username then data. They must have a folder called data saved on the database.
+there username then data. They must have a folder called data saved on the desktop.
 
 
 Then the user must start up mongo on robo3T. 
