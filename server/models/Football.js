@@ -9,8 +9,29 @@ const FootballerSchema  = new mongoose.Schema({
       required  : true,
       validator : value => !validator.isEmpty(value)
     
-    }
- 
+    },
+    
+   name: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    
+    },
+    
+   age: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    
+    },
+
+    
+    club: {
+      type      : String,
+      required  : true,
+      validator : value => !validator.isEmpty(value)
+    
+    },
   }, SchemeConfig);
 
   module.exports.Footballer = mongoose.model('Footballer', FootballerSchema);
