@@ -56,6 +56,10 @@ class Footballers extends React.Component {
           </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
+<div class = "footer">
+<p>Posted by: Hege Refsnes</p>
+<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p></div>
+}
         </div>
       )
     }

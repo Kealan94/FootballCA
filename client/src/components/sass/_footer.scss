@@ -1,3 +1,2 @@
-@mixin color ($prop) {
-    color: $property;
-}
+ 
+.footer { @include color(gray); }

@@ -1,15 +1,25 @@
 body {
-  background-color: lightblue;
+  background-color: darkgrey;
 }
 
 h1 {
-  color: white;
+  color: #119fe0;
   text-align: center;
 }
 
 p {
   font-family: verdana;
   font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: gray;
 }
 
 .navbar ul {
@@ -34,5 +44,15 @@ p {
 
 .navbar li a:hover {
   background-color: #111;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: gray;
 }
 /*# sourceMappingURL=main.css.map */
