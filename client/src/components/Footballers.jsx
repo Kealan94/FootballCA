@@ -39,9 +39,9 @@ class Footballers extends React.Component {
 <div class="navbar">
         <ul>
   <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#localhost:3000/footballers">Players</a></li>
+  <li><a href="localhost:3000/footballers">Players</a></li>
   <li><a href="#club">Clubs</a></li>
-  <li><a href="#stats ">Stats</a></li>
+  <li><a href="https://www.whoscored.com/Statistics ">stats</a></li>
 </ul>
         </div>
           <h1>All Footballers in the database</h1>
@@ -57,9 +57,8 @@ class Footballers extends React.Component {
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
 <div class = "footer">
-<p>Posted by: Hege Refsnes</p>
-<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p></div>
-}
+<p>Created By: Kealan Crilly</p>
+<p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>
         </div>
       )
     }

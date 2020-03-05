@@ -45,6 +45,7 @@ class AddFootballer extends React.Component {
               <label>footballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
+
             </div><div>
               <label>footballer name:
                 <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
@@ -54,22 +55,13 @@ class AddFootballer extends React.Component {
               <label>footballer Age:
                 <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
               </label>
-            </div>
-
-            <div>
+            </div><div>
 
               <label>football Club:
                 <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
               </label>
             </div>
 
-
-
-            {/* <div>
-              <label>football Content:
-                <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
-              </label>
-            </div> */}
 
             <div>
               <input type='submit' value='Add Footballer' />
@@ -125,7 +117,7 @@ class AddFootballer extends React.Component {
         }
         return res.json();
       })
-      .then (json => navigate(`/football/${json._id}`))
+      .then (json => navigate(`/footballers/${json._id}`))
       .catch(err => {
         this.setState({reportedError: err.message || 'Unknown'});
       })

@@ -44,10 +44,10 @@ router.post('/', (req, res) => {
     name      : req.body.name,
     age       : req.body.age,
     club      : req.body.club,
-    Description : req.body.Description,
+
   })
   .save()
-  .then (football => Football.populate(football, {path: '_id, title,name,age,club,description'}))
+  .then (football => Football.populate(football, {path: '_id'}))
   .then (football => res.json(football))
   .catch(err => res
     .status(400)
@@ -73,6 +73,9 @@ router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
       {_id: req.params.id},
       {$set: {
         title  : req.body.title,
+        name  : req.body.name,
+        age  : req.body.age,
+        club  : req.body.club,
       }},
       {new: true}
     )
