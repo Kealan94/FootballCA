@@ -85,7 +85,6 @@ class AddFootballer extends React.Component {
               <input type='submit' value='Add Footballer' />
             </div>
 
-
           </form>
           <Link to='/'>Back to All footballers</Link>
         </div>
