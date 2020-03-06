@@ -6,8 +6,8 @@ class Header extends React.Component {
   render() {
       return (
         <div class="header">
-        <h1>Header</h1>
-        <p>My supercool header</p>
+        <h1>Add footballer</h1>
+        <p>Please type in the name of the footballer in the box below to add a footballer to the database.</p>
       </div>
       )
 

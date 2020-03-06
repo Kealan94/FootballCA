@@ -12,11 +12,8 @@ class AddFootballer extends React.Component {
   // #######################################################
 
   state = {
-    id       : '',
     title    : '',
-    name     : '',
-    age      : '',
-    club     : ''
+
  
   }
 
@@ -47,74 +44,37 @@ class AddFootballer extends React.Component {
           <Navbar></Navbar>
           <Header> </Header>
 
-
-          <div>
-              <label>fooballer Id:
-                <input type='' value={this.state.id} onChange={this.handleIdUpdate.bind(this)} />
-              </label>
-            </div>
-
         
             <div>
               <label>fooballer Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
-
-
-            <div>
-              <label>fooballer Name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
-              </label>
-            </div>
-
-            <div>
-              <label>fooballer Age:
-                <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
-              </label>
-            </div>
-
-
-            <div>
-              <label>fooballer Club:
-                <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
-              </label>
-            </div>
-
+       
+ 
+        
             <div>
               <input type='submit' value='Add Footballer' />
+
+ 
             </div>
 
           </form>
           <Link to='/'>Back to All footballers</Link>
+          <div class = "footer">
+<p>Created By: Kealan Crilly</p>
+<p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>
         </div>
       );
     }
   }
   
-  handleIdUpdate(e) {
-    this.setState({id: e.target.value || null});
-  }
 
   handleTitleUpdate(e) {
     this.setState({title: e.target.value || null});
   }
-
-
-  handleNameUpdate(e) {
-    this.setState({name: e.target.value || null});
-  }
-
-  handleAgeUpdate(e) {
-    this.setState({age: e.target.value || null});
-  }
-
-
-  handleClubUpdate(e) {
-    this.setState({club: e.target.value || null});
-  }
-
-
+ 
+ 
   handleSubmit(e) {
 
     // Prevent the default form submit action
@@ -129,6 +89,8 @@ class AddFootballer extends React.Component {
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
         title     : this.state.title
+  
+
   
       })}
     )

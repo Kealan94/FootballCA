@@ -3,7 +3,7 @@ import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
-
+import '../components/sass/main.scss';
  
 
 class Footballers extends React.Component {
@@ -40,8 +40,8 @@ class Footballers extends React.Component {
         <ul>
   <li><a class="active" href="localhost:3001">Home</a></li>
   <li><a href="localhost:3001">Players</a></li>
-  <li><a href="#club">Clubs</a></li>
-  <li><a href="https://www.whoscored.com/Statistics ">stats</a></li>
+  <li><a href="https://europeanleagues.com/">Clubs</a></li>
+  <li><a href="https://www.whoscored.com/Statistics ">Stats</a></li>
 </ul>
         </div>
           <h1>All Footballers in the database</h1>
@@ -56,6 +56,48 @@ class Footballers extends React.Component {
           </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
+<div id = "table">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Club</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Lionel Messi</td>
+    <td>Barcelona</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>Cristiano Ronaldo</td>
+    <td>Juventus</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <td>Sergio Aguero</td>
+    <td>Manchester City</td>
+    <td>31</td>
+    </tr>
+  <tr>
+    <td>Bruno Fernandes</td>
+    <td>Manchester United</td>
+    <td>25</td>
+    </tr>
+  <tr>
+    <td>Mohammed Salah</td>
+    <td>Liverpool</td>
+    <td>27</td>
+
+    </tr>
+  <tr>
+    <td>Sergio Ramoss</td>
+    <td>Real Madrid</td>
+    <td>33</td>
+
+  </tr>
+</table></div>
+         
+
 <div class = "footer">
 <p>Created By: Kealan Crilly</p>
 <p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>

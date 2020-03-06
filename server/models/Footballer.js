@@ -5,18 +5,14 @@ const SchemeConfig = {timestamps: true, skipVersioning: true};
 const FootballerSchema  = new mongoose.Schema({
 
 
-  id: {
-    type      : String,
-    required  : true,
-    validator : value => !validator.isEmpty(value)
-  },
-
  
     title: {
       type      : String,
       required  : true,
       validator : value => !validator.isEmpty(value)
     },
+    
+    
  
  
   }, SchemeConfig);

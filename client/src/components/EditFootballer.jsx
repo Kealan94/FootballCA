@@ -28,7 +28,7 @@ class EditFootballer extends React.Component {
       return (
         <div>
           <h1>Error</h1>
-          <p>Sorry, there was an error creating the football. The error was: {this.state.reportedError || 'Unknown'}</p>
+          <p>Sorry, there was an error creating the footballer. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All footballers</Link>
         </div>
@@ -46,8 +46,8 @@ class EditFootballer extends React.Component {
         <ul>
   <li><a class="active" href="localhost:3000/footballers">Home</a></li>
   <li><a href="localhost:3001">Players</a></li>
-  <li><a href="#club">Clubs</a></li>
-  <li><a href="https://www.whoscored.com/Statistics ">stats</a></li>
+  <li><a href="https://europeanleagues.com/">Clubs</a></li>
+  <li><a href="https://www.whoscored.com/Statistics ">Stats</a></li>
 </ul>
         </div>
             <div>
