@@ -1,2 +1,7 @@
  
-.footer { @include color(gray); }
+.footer {
+     @include color(gray);
+
+padding-top: -10%;
+
+}

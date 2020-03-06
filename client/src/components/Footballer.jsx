@@ -34,19 +34,22 @@ class Footballer extends React.Component {
       );
     } else {
       return (
+        <body>
         <div>
           <Navbar></Navbar>
         <Header> </Header>
       
-        <Footer></Footer>
-          <h1>{this.state.footballer.title}</h1>
-          <div class ="image">
-          <h1><img src={this.state.footballer.image}></img></h1></div>
-          <h1>{this.state.footballer.age}</h1>
-          <h1>{this.state.footballer.club}</h1>
+        
+          <h1>name: {this.state.footballer.title}</h1>
+          <div >
+          <h1><img class ="image" src={this.state.footballer.image}></img></h1></div>
+          <h1>age:{this.state.footballer.age}</h1>
+          <h1>club:{this.state.footballer.club}</h1>
 
           <Link to='/'>Back to All footballers</Link>
         </div>
+        <footer><Footer></Footer></footer>
+        </body>
       )
     }
   }
