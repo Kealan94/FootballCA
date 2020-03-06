@@ -15,7 +15,7 @@ class AddFootballer extends React.Component {
 
   state = {
     title    : '',
-    name    : '',
+    image    : '',
     age    : '',
     club    : '',
   
@@ -59,8 +59,8 @@ class AddFootballer extends React.Component {
        
  
             <div>
-              <label>fooballer name:
-                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+              <label>fooballer image:
+                <input type='' value={this.state.image} onChange={this.handleImageUpdate.bind(this)} />
               </label>
             </div>
         
@@ -95,8 +95,8 @@ class AddFootballer extends React.Component {
   }
  
   
-  handleNameUpdate(e) {
-    this.setState({name: e.target.value || null});
+  handleImageUpdate(e) {
+    this.setState({image: e.target.value || null});
   }
  
   
@@ -124,7 +124,7 @@ class AddFootballer extends React.Component {
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
         title     : this.state.title,
-        name     : this.state.name,
+        image     : this.state.image,
         age     : this.state.age,
         club     : this.state.club,
 

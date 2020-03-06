@@ -40,6 +40,10 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 router.post('/', (req, res) => {
   return new Footballer({
     title     : req.body.title,
+    age     : req.body.age,
+    image     : req.body.image,
+    club     : req.body.club,
+
 
   })
   .save()

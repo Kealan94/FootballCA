@@ -4,7 +4,6 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
 import '../components/sass/main.scss';
-import Header         from './Header';
 import Navbar         from './Navbar';
 import Footer        from './Footer';
 
@@ -38,7 +37,6 @@ class Footballers extends React.Component {
       return (
         <div> 
 
-<Header> </Header>
         <Navbar></Navbar>
         <Footer></Footer>
 

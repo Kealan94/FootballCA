@@ -73,9 +73,25 @@ body {
 
 table {
   width: 100%;
+  max-width: 30%;
+  border-color: black;
+  border: 1px solid black;
 }
 
-th {
+table th {
+  padding: 5px;
+}
+
+table td {
+  padding: 5px;
+}
+
+tr {
+  left: 50px;
+  border-color: black;
+}
+
+tr td {
   text-align: center;
 }
 

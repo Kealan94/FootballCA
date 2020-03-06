@@ -39,9 +39,10 @@ class Footballer extends React.Component {
         <Navbar></Navbar>
         <Footer></Footer>
           <h1>{this.state.footballer.title}</h1>
-          <h1>{this.state.footballer.name}</h1>
+          <h1><img src={this.state.footballer.image}></img></h1>
           <h1>{this.state.footballer.age}</h1>
           <h1>{this.state.footballer.club}</h1>
+
           <Link to='/'>Back to All footballers</Link>
         </div>
       )
