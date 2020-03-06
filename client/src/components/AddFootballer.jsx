@@ -1,4 +1,3 @@
-
 import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
@@ -33,7 +32,7 @@ class AddFootballer extends React.Component {
       return (
         <div>
           <h1>Error</h1>
-          <p>Sorry, there was an error creating the fooballer. The error was: {this.state.reportedError || 'Unknown'}</p>
+          <p>Sorry, there was an error creating the footballer. The error was: {this.state.reportedError || 'Unknown'}</p>
           <a href='#' onClick={this.resetForRetry.bind(this)}>Try again</a>&nbsp;|&nbsp;
           <Link to='/'>Back to All footballers</Link>
         </div>
@@ -45,12 +44,13 @@ class AddFootballer extends React.Component {
     } else {
       return (
         <div>
-          <h1>Add a footballer</h1>
-          <form onSubmit={this.handleSubmit.bind(this)}>
+         
           <Navbar></Navbar>
-          <Header> </Header>
+         
           <Footer></Footer>
-        
+          <Header> </Header>
+           <h1>Add a footballer</h1>
+          <form onSubmit={this.handleSubmit.bind(this)}>
             <div>
               <label>fooballer title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />

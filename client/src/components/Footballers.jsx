@@ -1,4 +1,3 @@
- 
 import React              from 'react';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
@@ -48,7 +47,7 @@ class Footballers extends React.Component {
             ))}
           </ul>
           <h2>This is the homepage where you can view a list of all of the footballers and get information about them such as the clubs they have 
-          played for, awards won, goals scored etc.
+          played for, their age and images of each footballer.
           </h2>
           <p><Link to='/add-footballer'>Add a new Footballer</Link></p>
           <p><Link to='/edit-footballer'>Edit a new Footballer</Link></p>
