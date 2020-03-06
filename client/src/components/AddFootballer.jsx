@@ -1,3 +1,4 @@
+
 import React              from 'react';
 import {navigate, Link}   from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
@@ -5,6 +6,7 @@ import * as Config        from '../config.json'
 import '../components/sass/main.scss';
 import Header             from './Header';
 import Navbar             from './Navbar';
+import Footer             from './Footer';
 class AddFootballer extends React.Component {
 
   // #######################################################
@@ -13,6 +15,10 @@ class AddFootballer extends React.Component {
 
   state = {
     title    : '',
+    name    : '',
+    age    : '',
+    club    : '',
+  
 
  
   }
@@ -43,16 +49,33 @@ class AddFootballer extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
           <Navbar></Navbar>
           <Header> </Header>
-
+          <Footer></Footer>
         
             <div>
-              <label>fooballer Title:
+              <label>fooballer title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
        
  
+            <div>
+              <label>fooballer name:
+                <input type='' value={this.state.name} onChange={this.handleNameUpdate.bind(this)} />
+              </label>
+            </div>
         
+        
+            <div>
+              <label>fooballer Age:
+                <input type='' value={this.state.age} onChange={this.handleAgeUpdate.bind(this)} />
+              </label>
+            </div>
+            
+            <div>
+              <label>fooballer club:
+                <input type='' value={this.state.club} onChange={this.handleClubUpdate.bind(this)} />
+              </label>
+            </div>
             <div>
               <input type='submit' value='Add Footballer' />
 
@@ -61,9 +84,6 @@ class AddFootballer extends React.Component {
 
           </form>
           <Link to='/'>Back to All footballers</Link>
-          <div class = "footer">
-<p>Created By: Kealan Crilly</p>
-<p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>
         </div>
       );
     }
@@ -72,6 +92,21 @@ class AddFootballer extends React.Component {
 
   handleTitleUpdate(e) {
     this.setState({title: e.target.value || null});
+  }
+ 
+  
+  handleNameUpdate(e) {
+    this.setState({name: e.target.value || null});
+  }
+ 
+  
+  handleAgeUpdate(e) {
+    this.setState({age: e.target.value || null});
+  }
+ 
+  
+  handleClubUpdate(e) {
+    this.setState({club: e.target.value || null});
   }
  
  
@@ -88,8 +123,10 @@ class AddFootballer extends React.Component {
       },
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
-        title     : this.state.title
-  
+        title     : this.state.title,
+        name     : this.state.name,
+        age     : this.state.age,
+        club     : this.state.club,
 
   
       })}
@@ -112,7 +149,7 @@ class AddFootballer extends React.Component {
   }
 
   componentDidMount() {
-    // this.getComments(this.props.cakeID);
+    // this.getComments(this.props.footballerID);
   }
 
 }

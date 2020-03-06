@@ -4,7 +4,9 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
 import '../components/sass/main.scss';
- 
+import Header         from './Header';
+import Navbar         from './Navbar';
+import Footer        from './Footer';
 
 class Footballers extends React.Component {
 
@@ -36,19 +38,15 @@ class Footballers extends React.Component {
       return (
         <div> 
 
-<div class="navbar">
-        <ul>
-  <li><a class="active" href="localhost:3001">Home</a></li>
-  <li><a href="localhost:3001">Players</a></li>
-  <li><a href="https://europeanleagues.com/">Clubs</a></li>
-  <li><a href="https://www.whoscored.com/Statistics ">Stats</a></li>
-</ul>
-        </div>
-          <h1>All Footballers in the database</h1>
+<Header> </Header>
+        <Navbar></Navbar>
+        <Footer></Footer>
+
+          <h1>Welcome to my Footballers Website.</h1>
 
           <ul>
             {this.state.footballers.map(footballer => (
-              <li key={`footballer_${footballer._id}`}><Link to={`/footballer/${footballer._id}`}>{footballer.title}{footballer.description}</Link></li>
+              <li key={`footballer_${footballer._id}`}><Link to={`/footballer/${footballer._id}`}>{footballer.title}</Link></li>
             ))}
           </ul>
           <h2>This is the homepage where you can view a list of all of the footballers and get information about them such as the clubs they have 
@@ -97,10 +95,6 @@ class Footballers extends React.Component {
   </tr>
 </table></div>
          
-
-<div class = "footer">
-<p>Created By: Kealan Crilly</p>
-<p>Contact information: <a href="mailto:Crilly@hotmail.co.uk">Crilly@hotmail.co.uk</a></p></div>
         </div>
       )
     }

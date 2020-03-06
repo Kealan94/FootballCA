@@ -2,7 +2,9 @@ import React              from 'react';
 import {Link}             from '@reach/router';
 import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import * as Config        from '../config.json'
-import '../components/sass/main.scss';
+import Header         from './Header';
+import Navbar         from './Navbar';
+import Footer        from './Footer';
 
 class Footballer extends React.Component {
 
@@ -20,38 +22,38 @@ class Footballer extends React.Component {
 
     if (!this.state.footballer && this.state.footballerLoaded === true) {
       return (
-        <p>Error loading footballer. Try again later.</p>
+        <p>Error loading footballers. Try again later.</p>
       );
     } else if (!this.state.footballer) {
       return (
-        <p>Loading footballer...</p>
+        <p>Loading footballers...</p>
       );
     } else if (this.state.footballer.length === 0) {
       return (
-        <p>Sorry, no footballer are available</p>
+        <p>Sorry, no footballers are available</p>
       );
     } else {
       return (
         <div>
-          <h1>{this.state.footballer.id}</h1>
+        <Header> </Header>
+        <Navbar></Navbar>
+        <Footer></Footer>
           <h1>{this.state.footballer.title}</h1>
           <h1>{this.state.footballer.name}</h1>
           <h1>{this.state.footballer.age}</h1>
-          <h2>{this.state.footballer.club}</h2>
-      
- 
-      <Link to='/'>Back to All footballers on the home page </Link>
+          <h1>{this.state.footballer.club}</h1>
+          <Link to='/'>Back to All footballers</Link>
         </div>
       )
     }
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(`${Config.footballsAPI}/${this.props.footballID}`))
+    fetch(urlToCurrentDomain(`${Config.footballsAPI}/${this.props.footballerID}`))
       .then (res  => res.json())
       .then (json => {
-        this.setState({footballer      : json});
-        this.setState({footballLoaded : true});
+        this.setState({footballer       : json});
+        this.setState({footballerLoaded : true});
       })
       .catch(err => {
         this.setState({footballerLoaded: true});

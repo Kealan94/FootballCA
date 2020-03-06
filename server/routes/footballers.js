@@ -40,6 +40,7 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 router.post('/', (req, res) => {
   return new Footballer({
     title     : req.body.title,
+
   })
   .save()
   .then (footballer => Footballer.populate(footballer, {path: '_id'}))
